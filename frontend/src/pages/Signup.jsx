@@ -34,10 +34,13 @@ const Signup = () => {
   return (
     <main className="grid min-h-screen bg-slate-100 lg:grid-cols-[1fr_560px]">
       <section className="hidden bg-slate-950 px-12 py-10 text-white lg:flex lg:flex-col lg:justify-between">
-        <div className="group flex items-center gap-3">
-          <AppLogo className="h-12 w-12 shrink-0 drop-shadow-[0_10px_22px_rgba(45,212,191,0.2)] transition duration-300 group-hover:-rotate-2 group-hover:scale-105 group-hover:drop-shadow-[0_16px_30px_rgba(45,212,191,0.34)]" />
-          <p className="text-xl font-bold">FlowPilot</p>
-        </div>
+        <Link className="group flex items-center gap-3" to="/">
+          <AppLogo
+            flat
+            className="h-11 w-11 shrink-0 transition duration-300 group-hover:-rotate-2 group-hover:scale-105"
+          />
+          <span className="text-lg font-bold">FlowPilot</span>
+        </Link>
         <div className="max-w-xl">
           <h1 className="text-5xl font-bold leading-tight">Create momentum before the day gets loud.</h1>
           <p className="mt-5 text-lg leading-8 text-slate-300">
@@ -49,7 +52,7 @@ const Signup = () => {
       <section className="flex items-center justify-center px-5 py-10">
         <div className="w-full max-w-md rounded-lg bg-white p-6 shadow-soft">
           <div>
-            <p className="text-sm font-bold uppercase tracking-wide text-emerald-600">Signup</p>
+            <p className="text-sm font-bold uppercase tracking-wide text-emerald-700">Signup</p>
             <h2 className="mt-2 text-3xl font-bold text-slate-950">Start planning</h2>
           </div>
 
