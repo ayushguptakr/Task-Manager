@@ -68,7 +68,7 @@ const Landing = () => (
           Log in
         </Link>
         <Link
-          className="inline-flex items-center gap-2 rounded-md bg-emerald-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-emerald-800"
+          className="inline-flex items-center gap-2 rounded-md bg-emerald-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-emerald-800 active:translate-y-px focus:outline-none focus:ring-2 focus:ring-emerald-700 focus:ring-offset-2 focus:ring-offset-[#f7f8f4]"
           to="/signup"
         >
           Get started
@@ -89,14 +89,14 @@ const Landing = () => (
 
         <div className="mt-9 flex flex-col gap-3 sm:flex-row">
           <Link
-            className="inline-flex items-center justify-center gap-2 rounded-md bg-emerald-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-emerald-800"
+            className="inline-flex items-center justify-center gap-2 rounded-md bg-emerald-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-emerald-800 active:translate-y-px focus:outline-none focus:ring-2 focus:ring-emerald-700 focus:ring-offset-2 focus:ring-offset-[#f7f8f4]"
             to="/signup"
           >
             Create account
             <ArrowRight size={17} aria-hidden="true" />
           </Link>
           <Link
-            className="inline-flex items-center justify-center rounded-md border border-slate-300 px-5 py-3 text-sm font-bold text-slate-800 transition hover:border-emerald-700 hover:text-emerald-700"
+            className="inline-flex items-center justify-center rounded-md border border-slate-300 px-5 py-3 text-sm font-bold text-slate-800 transition hover:border-emerald-700 hover:text-emerald-700 active:translate-y-px focus:outline-none focus:ring-2 focus:ring-emerald-700 focus:ring-offset-2 focus:ring-offset-[#f7f8f4]"
             to="/login"
           >
             Open dashboard
@@ -105,15 +105,15 @@ const Landing = () => (
 
         <div className="mt-10 grid gap-5 border-t border-slate-300 pt-6 sm:grid-cols-3">
           <div>
-            <p className="text-3xl font-black text-slate-950">7d</p>
+            <p className="text-3xl font-black tabular-nums text-slate-950">7d</p>
             <p className="mt-1 text-sm font-medium text-slate-600">Login token length</p>
           </div>
           <div>
-            <p className="text-3xl font-black text-slate-950">5</p>
+            <p className="text-3xl font-black tabular-nums text-slate-950">5</p>
             <p className="mt-1 text-sm font-medium text-slate-600">Priority levels</p>
           </div>
           <div>
-            <p className="text-3xl font-black text-slate-950">24h</p>
+            <p className="text-3xl font-black tabular-nums text-slate-950">24h</p>
             <p className="mt-1 text-sm font-medium text-slate-600">Daily planning view</p>
           </div>
         </div>
@@ -146,7 +146,7 @@ const Landing = () => (
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <p className="text-sm font-bold uppercase tracking-wide text-emerald-700">Dashboard</p>
-                  <h2 className="mt-1 text-2xl font-black">Good afternoon, Test User!</h2>
+                  <h2 className="mt-1 text-2xl font-black">Good afternoon, User!</h2>
                 </div>
                 <button className="rounded-md bg-emerald-700 px-4 py-2 text-sm font-bold text-white" type="button">
                   New Task
@@ -290,15 +290,31 @@ const Landing = () => (
 
       <div className="grid gap-4 sm:grid-cols-2">
         {[
-          ["Frontend", "The app uses React, Vite, Tailwind CSS, Axios, and protected routes."],
-          ["Backend", "The API uses Express, MongoDB, Mongoose, JWT auth, and user-specific routes."],
-          ["Security", "Passwords are hashed, and login tokens expire after seven days."],
-          ["Deployment", "Environment variables and CORS settings are already included."],
-        ].map(([title, copy]) => (
-          <div className="rounded-lg border border-slate-300 p-5" key={title}>
-            <LockKeyhole className="text-emerald-700" size={21} aria-hidden="true" />
-            <h3 className="mt-4 font-black">{title}</h3>
-            <p className="mt-2 text-sm leading-[1.55] text-slate-700">{copy}</p>
+          {
+            title: "Frontend",
+            icon: PanelsTopLeft,
+            copy: "The app uses React, Vite, Tailwind CSS, Axios, and protected routes.",
+          },
+          {
+            title: "Backend",
+            icon: ListChecks,
+            copy: "The API uses Express, MongoDB, Mongoose, JWT auth, and user-specific routes.",
+          },
+          {
+            title: "Security",
+            icon: LockKeyhole,
+            copy: "Passwords are hashed, and login tokens expire after seven days.",
+          },
+          {
+            title: "Deployment",
+            icon: ShieldCheck,
+            copy: "Environment variables and CORS settings are already included.",
+          },
+        ].map((item) => (
+          <div className="rounded-lg border border-slate-300 p-5" key={item.title}>
+            <item.icon className="text-emerald-700" size={21} aria-hidden="true" />
+            <h3 className="mt-4 font-black">{item.title}</h3>
+            <p className="mt-2 text-sm leading-[1.55] text-slate-700">{item.copy}</p>
           </div>
         ))}
       </div>
@@ -312,14 +328,14 @@ const Landing = () => (
         </div>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row lg:mt-0">
           <Link
-            className="inline-flex items-center justify-center gap-2 rounded-md bg-emerald-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-emerald-800"
+            className="inline-flex items-center justify-center gap-2 rounded-md bg-emerald-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-emerald-800 active:translate-y-px focus:outline-none focus:ring-2 focus:ring-emerald-700 focus:ring-offset-2 focus:ring-offset-[#f7f8f4]"
             to="/signup"
           >
             Create account
             <ArrowRight size={17} aria-hidden="true" />
           </Link>
           <Link
-            className="inline-flex items-center justify-center rounded-md border border-slate-300 px-5 py-3 text-sm font-bold text-slate-800 transition hover:border-emerald-700 hover:text-emerald-700"
+            className="inline-flex items-center justify-center rounded-md border border-slate-300 px-5 py-3 text-sm font-bold text-slate-800 transition hover:border-emerald-700 hover:text-emerald-700 active:translate-y-px focus:outline-none focus:ring-2 focus:ring-emerald-700 focus:ring-offset-2 focus:ring-offset-[#f7f8f4]"
             to="/login"
           >
             Log in

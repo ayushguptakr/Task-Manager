@@ -47,3 +47,7 @@ Thumbs.db
 *.pfx
 secrets.json
 credentials.json
+
+# AI/Agent tools
+.agents/
+skills-lock.json
