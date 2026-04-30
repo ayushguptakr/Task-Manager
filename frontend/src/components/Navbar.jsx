@@ -58,7 +58,7 @@ const Navbar = () => {
 
       <div className="mt-6 shrink-0 rounded-md border border-white/10 bg-white/5 p-3 shadow-[0_18px_50px_rgba(0,0,0,0.22)]">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-cyan-500 text-sm font-bold text-slate-950">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-sm font-bold text-white">
             {initials || "U"}
           </div>
           <div className="min-w-0">
