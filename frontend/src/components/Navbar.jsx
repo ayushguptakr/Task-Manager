@@ -22,7 +22,10 @@ const Navbar = () => {
   return (
     <aside className="flex h-full min-h-0 w-full flex-col bg-slate-950 px-5 py-6 text-white lg:h-dvh lg:w-72 lg:overflow-hidden">
       <div className="group flex shrink-0 items-center gap-3">
-        <AppLogo className="h-12 w-12 shrink-0 drop-shadow-[0_10px_22px_rgba(45,212,191,0.2)] transition duration-300 group-hover:-rotate-2 group-hover:scale-105 group-hover:drop-shadow-[0_16px_30px_rgba(45,212,191,0.34)]" />
+        <AppLogo
+          flat
+          className="h-11 w-11 shrink-0 transition duration-300 group-hover:-rotate-2 group-hover:scale-105"
+        />
         <div>
           <p className="text-lg font-bold">FlowPilot</p>
           <p className="text-xs text-slate-400">Smart task command center</p>

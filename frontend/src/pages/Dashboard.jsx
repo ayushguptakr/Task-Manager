@@ -134,7 +134,7 @@ const Dashboard = () => {
         <div className="mx-auto max-w-7xl">
           <header className="flex flex-col gap-4 rounded-lg border border-slate-200 bg-white p-5 shadow-sm sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="text-sm font-bold uppercase tracking-wide text-emerald-600">Dashboard</p>
+              <p className="text-sm font-bold uppercase tracking-wide text-emerald-700">Dashboard</p>
               <h1 className="mt-1 text-2xl font-bold text-slate-950 sm:text-3xl">
                 {greeting()}, {user?.name}!
               </h1>
@@ -171,7 +171,7 @@ const Dashboard = () => {
                 <p className="text-2xl font-bold text-emerald-700">{progress}%</p>
               </div>
               <div className="mt-4 h-3 overflow-hidden rounded-full bg-slate-100">
-                <div className="h-full rounded-full bg-emerald-600 transition-all" style={{ width: `${progress}%` }} />
+                <div className="h-full rounded-full bg-emerald-700 transition-all" style={{ width: `${progress}%` }} />
               </div>
             </div>
 
@@ -233,7 +233,7 @@ const Dashboard = () => {
           <section className="mt-5 space-y-3">
             {loading ? (
               <div className="flex h-64 items-center justify-center rounded-lg border border-slate-200 bg-white">
-                <div className="h-10 w-10 animate-spin rounded-full border-4 border-slate-200 border-t-emerald-600" />
+                <div className="h-10 w-10 animate-spin rounded-full border-4 border-slate-200 border-t-emerald-700" />
               </div>
             ) : filteredTasks.length ? (
               filteredTasks.map((task) => (
